@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal" created-in="RD-243.24978.27">
-    <data-source name="reporting@box" uuid="0585d995-6186-41f2-83a3-0da3b556b2a7">
+    <data-source name="box" uuid="0585d995-6186-41f2-83a3-0da3b556b2a7">
       <database-info product="MariaDB" version="10.11.8-MariaDB-0ubuntu0.24.04.1" jdbc-version="4.2" driver-name="MariaDB Connector/J" driver-version="3.3.3" dbms="MARIADB" exact-version="10.11.8" exact-driver-version="3.3">
         <extra-name-characters>#@</extra-name-characters>
         <identifier-quote-string>`</identifier-quote-string>
@@ -14,6 +14,27 @@
           <node kind="schema" qname="@" />
         </introspection-scope>
       </schema-mapping>
+    </data-source>
+    <data-source name="insof.net" uuid="de54b75d-10d1-4659-a382-2d3b9e003c0f">
+      <database-info product="MariaDB" version="11.4.3-MariaDB-1" jdbc-version="4.2" driver-name="MariaDB Connector/J" driver-version="3.3.3" dbms="MARIADB" exact-version="11.4.3" exact-driver-version="3.3">
+        <extra-name-characters>#@</extra-name-characters>
+        <identifier-quote-string>`</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>reporting</user-name>
+      <schema-mapping>
+        <introspection-scope>
+          <node kind="schema">
+            <name qname="@" />
+            <name qname="reporting" />
+          </node>
+        </introspection-scope>
+      </schema-mapping>
+      <ssh-properties>
+        <enabled>true</enabled>
+        <ssh-config-id>a659ba78-a402-4b91-9408-13b01b5c443d</ssh-config-id>
+      </ssh-properties>
     </data-source>
   </component>
 </project>
