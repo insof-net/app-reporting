@@ -8,19 +8,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aaeb7043-6074-4943-9185-9809dcaf0809" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Insof.AppReporting.Api/DataAccess/Repositories/EventRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Insof.AppReporting.Api/Endpoints/LogEventEndpoint.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Insof.AppReporting.Api/Startup/Program.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Insof.AppReporting.Api/Startup/ServicesSetup.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Insof.AppReporting.Api/Startup/Settings.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.Insof.AppReporting/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SqlScripts/Procedures/InsertEvent.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SqlScripts/Procedures/InsertEventAttribute.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SqlScripts/tables/EventAttributes.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SqlScripts/tables/Events.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Insof.AppReporting/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Insof.AppReporting/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Insof.AppReporting.Api/Insof.AppReporting.Api.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Insof.AppReporting.Api/Insof.AppReporting.Api.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Insof.AppReporting.Api/Program.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Insof.AppReporting.Api/DataAccess/Repositories/EventRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Insof.AppReporting.Api/DataAccess/Repositories/EventRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Insof.AppReporting.Api/Insof.AppReporting.Api.http" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Insof.AppReporting.Api/Startup/Settings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Insof.AppReporting.Api/Startup/Settings.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Insof.AppReporting.Api/WeatherForecast.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Insof.AppReporting.Api/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/Insof.AppReporting.Api/appsettings.Development.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Insof.AppReporting.Api/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Insof.AppReporting.Api/appsettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Insof.AppReporting.Client/AppReportingClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Insof.AppReporting.Client/AppReportingClient.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Insof.AppReporting.Client/Models/AppEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Insof.AppReporting.Client/Models/AppEvent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Insof.AppReporting.Client/Response/WriteEventResponse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Insof.AppReporting.Client/Response/LogEventResponse.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,21 +61,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Launch Settings Profile.Insof.AppReporting.Api: http.executor": "Debug",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Launch Settings Profile.Insof.AppReporting.Api: http.executor&quot;: &quot;Debug&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
+    ]
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Insof.AppReporting.Api: http" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/Insof.AppReporting.Api/Insof.AppReporting.Api.csproj" />
@@ -107,7 +112,9 @@
       <workItem from="1739749827888" duration="147000" />
       <workItem from="1739749984498" duration="35000" />
       <workItem from="1739750027489" duration="221000" />
-      <workItem from="1739755288444" duration="3058000" />
+      <workItem from="1739755288444" duration="8009000" />
+      <workItem from="1739765432694" duration="252000" />
+      <workItem from="1739765699404" duration="6000" />
     </task>
     <servers />
   </component>
@@ -117,6 +124,25 @@
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Insof.AppReporting.Api/DataAccess/Repositories/EventRepository.cs</url>
+          <line>25</line>
+          <properties documentPath="$PROJECT_DIR$/Insof.AppReporting.Api/DataAccess/Repositories/EventRepository.cs" containingFunctionPresentation="Method 'InsertEvent'">
+            <startOffsets>
+              <option value="555" />
+            </startOffsets>
+            <endOffsets>
+              <option value="641" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

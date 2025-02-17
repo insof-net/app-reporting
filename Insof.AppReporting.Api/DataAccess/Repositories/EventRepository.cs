@@ -23,35 +23,34 @@ public class EventRepository : IEventRepository
     
     public async Task InsertEvent(AppEvent appEvent)
     {
-        await using var connection = new MySqlConnection(_settings.ConnectionString);
+        await using var connection = new MySqlConnection(_settings.ReportingConnectionString);
 
-        var id = await connection.ExecuteScalarAsync<int>("todo:",
+        var id = await connection.ExecuteScalarAsync<int>("InsertEvent",
             new
             {
-                appEvent.Timestamp,
-                Severity = (int)appEvent.Severity,
-                appEvent.SystemName,
-                appEvent.ApplicationName,
-                appEvent.ApplicationVersion,
-                appEvent.HostName,
-                appEvent.FilePath,
-                appEvent.MethodName,
-                appEvent.ClassName,
-                appEvent.LineNumber,
-                appEvent.Message,
-                appEvent.ExceptionType,
-                appEvent.ExceptionStackTrace
-            },
-            commandType: CommandType.StoredProcedure);
+                p_Timestamp = appEvent.Timestamp,
+                p_Severity = (int)appEvent.Severity,
+                p_SystemName = appEvent.SystemName,
+                p_ApplicationName = appEvent.ApplicationName,
+                p_ApplicationVersion = appEvent.ApplicationVersion,
+                p_HostName = appEvent.HostName,
+                p_FilePath = appEvent.FilePath,
+                p_MethodName = appEvent.MethodName,
+                p_ClassName = appEvent.ClassName,
+                p_LineNumber = appEvent.LineNumber,
+                p_Message = appEvent.Message,
+                p_ExceptionType = appEvent.ExceptionType,
+                p_ExceptionStackTrace = appEvent.ExceptionStackTrace
+            }, commandType: CommandType.StoredProcedure);
 
         foreach (var attribute in appEvent.AppEventAttributes)
         {
-            await connection.ExecuteAsync("todo:", new
+            await connection.ExecuteAsync("InsertEventAttribute", new
             {
-                EventId = id,
-                attribute.Name,
-                attribute.Value
-            });
+                p_Id = id,
+                p_Name = attribute.Name,
+                p_Value = attribute.Value
+            }, commandType: CommandType.StoredProcedure);
         }
     }
 }
