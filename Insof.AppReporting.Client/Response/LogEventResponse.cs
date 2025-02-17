@@ -1,3 +1,3 @@
 namespace Insof.AppReporting.Client.Response;
 
-public class WriteEventResponse : ResponseBase;
+public class LogEventResponse : ResponseBase;

@@ -12,7 +12,7 @@ namespace Insof.AppReporting.Client;
 
 public interface IAppReportingClient
 {
-    Task<WriteEventResponse> LogEventAsync<T>(SeverityLevel severityLevel,
+    Task<LogEventResponse> LogEventAsync<T>(SeverityLevel severityLevel,
         string message,
         object? attributes = null,
         Exception? exception = null,
@@ -20,7 +20,7 @@ public interface IAppReportingClient
         [CallerFilePath] string filePath = "",
         [CallerLineNumber] int lineNumber = 0) where T : class;
 
-    WriteEventResponse LogEvent<T>(SeverityLevel severityLevel,
+    LogEventResponse LogEvent<T>(SeverityLevel severityLevel,
         string message,
         object? attributes = null,
         Exception? exception = null,
@@ -28,7 +28,7 @@ public interface IAppReportingClient
         [CallerFilePath] string filePath = "",
         [CallerLineNumber] int lineNumber = 0) where T : class;
 
-    Task<WriteEventResponse> LogEventAsync(Type type,
+    Task<LogEventResponse> LogEventAsync(Type type,
         SeverityLevel severityLevel,
         string message,
         object? attributes = null,
@@ -37,7 +37,7 @@ public interface IAppReportingClient
         [CallerFilePath] string filePath = "",
         [CallerLineNumber] int lineNumber = 0);
 
-    WriteEventResponse LogEvent(Type type,
+    LogEventResponse LogEvent(Type type,
         SeverityLevel severityLevel,
         string message,
         object? attributes = null,
@@ -57,7 +57,7 @@ public sealed class AppReportingClient : ClientBase, IAppReportingClient
         _applicationInformation = applicationInformation;
     }
 
-    public async Task<WriteEventResponse> LogEventAsync(Type type,
+    public async Task<LogEventResponse> LogEventAsync(Type type,
         SeverityLevel severityLevel,
         string message,
         object? attributes = null,
@@ -75,7 +75,7 @@ public sealed class AppReportingClient : ClientBase, IAppReportingClient
             HostName = _applicationInformation.HostName,
             Timestamp = DateTimeOffset.UtcNow,
             Message = message,
-            AppEventAttributes = attributes?.MapAttributes(),
+            AppEventAttributes = attributes?.MapAttributes() ?? [],
             ExceptionType = exception?.GetType().FullName ?? string.Empty,
             ExceptionStackTrace = exception?.StackTrace ?? string.Empty,
             MethodName = method,
@@ -92,7 +92,7 @@ public sealed class AppReportingClient : ClientBase, IAppReportingClient
             httpRequest.Method = HttpMethod.Post;
             httpRequest.Content = content;
             httpRequest.RequestUri = new Uri("event", UriKind.Relative);
-            var r = await SendAsync<WriteEventResponse>(httpRequest)
+            var r = await SendAsync<LogEventResponse>(httpRequest)
                 .ConfigureAwait(false);
 
             if (r.Exception != null)
@@ -104,7 +104,7 @@ public sealed class AppReportingClient : ClientBase, IAppReportingClient
         {
             _applicationInformation.OnError?.Invoke(ex, appEvent);
 
-            return new WriteEventResponse
+            return new LogEventResponse
             {
                 StatusCode = -1,
                 Message = ex.Message
@@ -112,7 +112,7 @@ public sealed class AppReportingClient : ClientBase, IAppReportingClient
         }
     }
 
-    public WriteEventResponse LogEvent(Type type,
+    public LogEventResponse LogEvent(Type type,
         SeverityLevel severityLevel,
         string message,
         object? attributes = null,
@@ -134,7 +134,7 @@ public sealed class AppReportingClient : ClientBase, IAppReportingClient
     }
 
 
-    public async Task<WriteEventResponse> LogEventAsync<T>(SeverityLevel severityLevel,
+    public async Task<LogEventResponse> LogEventAsync<T>(SeverityLevel severityLevel,
         string message,
         object? attributes = null,
         Exception? exception = null,
@@ -154,7 +154,7 @@ public sealed class AppReportingClient : ClientBase, IAppReportingClient
             lineNumber);
     }
 
-    public WriteEventResponse LogEvent<T>(SeverityLevel severityLevel,
+    public LogEventResponse LogEvent<T>(SeverityLevel severityLevel,
         string message,
         object? attributes = null,
         Exception? exception = null,

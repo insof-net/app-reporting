@@ -19,7 +19,7 @@ public sealed class AppEvent
     public required string ExceptionType { get; init; }
     public required string ExceptionStackTrace { get; init; }
     public required int LineNumber { get; init; }
-    public required List<AppEventAttribute>? AppEventAttributes { get; init; }
+    public required List<AppEventAttribute> AppEventAttributes { get; init; }
 
     public override string ToString()
     {

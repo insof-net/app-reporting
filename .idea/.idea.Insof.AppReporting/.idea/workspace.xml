@@ -8,23 +8,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aaeb7043-6074-4943-9185-9809dcaf0809" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Insof.AppReporting.Client/AppReportingClient.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Insof.AppReporting.Client/AppReportingClientConfiguration.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Insof.AppReporting.Client/Helpers/AsyncHelper.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Insof.AppReporting.Client/Helpers/AttributeHelper.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Insof.AppReporting.Client/Models/AppEvent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Insof.AppReporting.Client/Models/AppEventAttribute.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Insof.AppReporting.Client/Models/ApplicationInformation.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Insof.AppReporting.Client/Models/SeverityLevel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Insof.AppReporting.Client/Response/ResponseBase.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Insof.AppReporting.Client/Response/WriteEventResponse.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Insof.AppReporting.Client/ServicesHelper.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Insof.AppReporting.Api/DataAccess/Repositories/EventRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Insof.AppReporting.Api/Endpoints/LogEventEndpoint.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Insof.AppReporting.Api/Startup/Program.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Insof.AppReporting.Api/Startup/ServicesSetup.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Insof.AppReporting.Api/Startup/Settings.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Insof.AppReporting/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Insof.AppReporting/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Insof.AppReporting.Api/Insof.AppReporting.Api.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Insof.AppReporting.Api/Insof.AppReporting.Api.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Insof.AppReporting.Api/Program.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Insof.AppReporting.Api/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/Insof.AppReporting.Api/appsettings.Development.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Insof.AppReporting.Api/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Insof.AppReporting.Api/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Insof.AppReporting.Client/AppReportingClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Insof.AppReporting.Client/AppReportingClient.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Insof.AppReporting.Client/Models/AppEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Insof.AppReporting.Client/Models/AppEvent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Insof.AppReporting.Client/Response/WriteEventResponse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Insof.AppReporting.Client/Response/LogEventResponse.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DpaMonitoringSettings">
+    <option name="firstShow" value="false" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -44,6 +48,9 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file:///usr/local/share/dotnet/sdk/8.0.201/Sdks/Microsoft.NET.Sdk/analyzers/build/config/analysislevel_8_default.globalconfig" root0="FORCE_HIGHLIGHTING" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
@@ -55,20 +62,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    ".NET Launch Settings Profile.Insof.AppReporting.Api: http.executor": "Debug",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="Insof.AppReporting.Api: http" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/Insof.AppReporting.Api/Insof.AppReporting.Api.csproj" />
@@ -99,6 +107,7 @@
       <workItem from="1739749827888" duration="147000" />
       <workItem from="1739749984498" duration="35000" />
       <workItem from="1739750027489" duration="221000" />
+      <workItem from="1739755288444" duration="3058000" />
     </task>
     <servers />
   </component>
@@ -108,5 +117,9 @@
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
