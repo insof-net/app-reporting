@@ -8,18 +8,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aaeb7043-6074-4943-9185-9809dcaf0809" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Insof.AppReporting/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SqlScripts/Procedures/InsertEvent.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SqlScripts/Procedures/InsertEventAttribute.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SqlScripts/tables/EventAttributes.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SqlScripts/tables/Events.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Insof.AppReporting/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Insof.AppReporting/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Insof.AppReporting.Api/DataAccess/Repositories/EventRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Insof.AppReporting.Api/DataAccess/Repositories/EventRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Insof.AppReporting.Api/Insof.AppReporting.Api.http" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Insof.AppReporting.Api/Startup/Settings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Insof.AppReporting.Api/Startup/Settings.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Insof.AppReporting.Api/WeatherForecast.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Insof.AppReporting.Api/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/Insof.AppReporting.Api/appsettings.Development.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Insof.AppReporting.Api/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Insof.AppReporting.Api/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Insof.AppReporting.Client/AppReportingClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Insof.AppReporting.Client/AppReportingClient.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Insof.AppReporting.Client/Insof.AppReporting.Client.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Insof.AppReporting.Client/Insof.AppReporting.Client.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +105,8 @@
       <workItem from="1739750027489" duration="221000" />
       <workItem from="1739755288444" duration="8009000" />
       <workItem from="1739765432694" duration="252000" />
-      <workItem from="1739765699404" duration="6000" />
+      <workItem from="1739765699404" duration="291000" />
+      <workItem from="1739766084297" duration="702000" />
     </task>
     <servers />
   </component>
@@ -124,25 +116,6 @@
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Insof.AppReporting.Api/DataAccess/Repositories/EventRepository.cs</url>
-          <line>25</line>
-          <properties documentPath="$PROJECT_DIR$/Insof.AppReporting.Api/DataAccess/Repositories/EventRepository.cs" containingFunctionPresentation="Method 'InsertEvent'">
-            <startOffsets>
-              <option value="555" />
-            </startOffsets>
-            <endOffsets>
-              <option value="641" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -7,8 +7,8 @@
         <RepositoryUrl>https://github.com/insof-net/app-reporting</RepositoryUrl>
         <Description>AppReporting Client - Insof.net</Description>
         <Copyright>Copyright 2025 David Crowell</Copyright>
-        <Version>0.0.1</Version>
-        <InformationalVersion>0.0.1</InformationalVersion>
+        <Version>0.1.1</Version>
+        <InformationalVersion>0.1.1</InformationalVersion>
         <IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
     </PropertyGroup>
 

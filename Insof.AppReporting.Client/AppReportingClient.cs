@@ -91,7 +91,7 @@ public sealed class AppReportingClient : ClientBase, IAppReportingClient
             using var httpRequest = new HttpRequestMessage();
             httpRequest.Method = HttpMethod.Post;
             httpRequest.Content = content;
-            httpRequest.RequestUri = new Uri("event", UriKind.Relative);
+            httpRequest.RequestUri = new Uri("log-event", UriKind.Relative);
             var r = await SendAsync<LogEventResponse>(httpRequest)
                 .ConfigureAwait(false);
 
